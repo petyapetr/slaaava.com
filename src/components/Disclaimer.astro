@@ -1,0 +1,27 @@
+---
+const locale = Astro.props;
+let message = 'Stop war in Ukraine'
+
+if (locale === "ru") {
+	message = 'Остановите войну в Украине'
+}
+---
+
+<p class="msg text-extended">{message}!</p>
+
+<style>
+	.msg {
+		background: var(--clr-dark-shade);
+		color: var(--clr-light);
+		display: block grid;
+		font-size: var(--size-step-0);
+		font-weight: 900;
+		line-height: 1;
+		padding-block: .75em;
+		place-content: center;
+	}
+
+	p {
+		max-width: unset;
+	}
+</style>

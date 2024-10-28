@@ -1,0 +1,71 @@
+---
+import type {CollectionKey, CollectionEntry} from "astro:content";
+import {getCollection} from "astro:content";
+interface Props {
+	collectionName: CollectionKey;
+	count: number;
+	exclude: CollectionEntry<CollectionKey>;
+}
+
+const {collectionName, count = 5, exclude} = Astro.props;
+const collection = await getCollection(collectionName);
+const records = collection
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+	.filter((entry) => {
+		if (exclude) {
+			return entry.id !== exclude.id;
+		}
+
+		return entry;
+	})
+	.map((entry) => {
+		const {data, slug} = entry;
+		const {title, publishDate} = data;
+		const formattedDate = publishDate.toLocaleDateString("en-GB", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		});
+		const href = "/" + collectionName + "/" + slug;
+		return [title, formattedDate, href];
+	})
+	.slice(0, count);
+---
+
+<ul class="records__list | flow" role="list">
+	{
+		records.map(([title, date, href]) => (
+			<li class="record">
+				<a {href}>
+					<h3 class="record__title">{title}</h3>
+					<p class="record__date | text-narrow">{date}</p>
+				</a>
+			</li>
+		))
+	}
+</ul>
+
+<style>
+	.records__list * {
+		--flow-space: var(--space-s) /* margin-block-start: var(--flow-space); */
+			/* padding-block: var(--list-padding, var(--space-l)); */;
+	}
+
+	.record {
+		width: fit-content;
+	}
+
+	.record__title {
+		font-weight: 400;
+		font-family: var(--font-display);
+		font-size: var(--record-title-size, var(--size-step-2));
+	}
+
+	.record a {
+		text-decoration: none;
+	}
+
+	.record a:hover .record__title {
+		color: var(--clr-mid);
+	}
+</style>

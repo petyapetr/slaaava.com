@@ -1,0 +1,29 @@
+.text-extended {
+  font-family: system-ui, sans-serif;
+  font-stretch: extra-expanded;
+}
+
+.text-narrow {
+  font-family: system-ui, sans-serif;
+  font-stretch: condensed;
+}
+
+.text-mono {
+	font-family: var(--font-mono);
+}
+
+.text-mid {
+  color: var(--clr-dark-glare);
+
+	a:hover {
+		color: var(--clr-global-text);
+	}
+}
+
+.highlight {
+	background: var(--clr-primary);
+}
+
+.inner-wrapper {
+	padding-inline: var(--gutter);
+}

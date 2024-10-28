@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About — Slava Zakharov" lang="ru">
+	<div class="about__page | inner-wrapper">
+		<h1><span class="highlight">About</span> me</h1>
+		<div class="about__content | switcher">
+			<div class="about__text | flow">
+				<p>
+					Hi! I'm Slava Zakharov <em>(he/him)</em>, and I write software.
+				</p>
+				<p>
+					I have a strong interest in geospatial technologies and a commitment
+					to the independent web. My focus is on building meaningful products,
+					and I care deeply about the <em>what</em>, <em>how</em>, and <em
+						>why</em
+					> behind my work.
+				</p>
+				<p>
+					Originally from Saint-Petersburg, I'm currently based in Yerevan.
+				</p>
+				<p>
+					While afk, you can find me running, reading, and bloging. I used to record a <a
+						href="https://deepcuts.ru/podcast">podcast</a
+					>.
+				</p>
+				<p>
+					Feel free to <a href="mailto:slava.zakharov@mailbox.org">email</a> me with
+					comments or questions.<br /> Alternatively — reach out on <a
+						href="https://bsky.app/profile/beaterpetr.bsky.social">bluesky</a
+					>.
+				</p>
+			</div>
+			<img
+				class="about__img"
+				src="/pixelated-head-shot.jpeg"
+				alt="Pixelated head shot of me"
+			/>
+		</div>
+	</div>
+</MainLayout>
+
+<style>
+	.about__page {
+		padding-block: var(--space-xl);
+	}
+
+	.about__content {
+		padding-block: var(--space-l);
+	}
+
+	.about__img {
+		--max: 256px;
+
+		width: clamp(300px, 70%, var(--max));
+	}
+</style>

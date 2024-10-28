@@ -1,0 +1,21 @@
+- * Add /about page
+
+---
+
+- Add styles for code blocks within blog template
+
+- Add backlinks to a /blog/* page template
+
+- Add sidebar to a /blog/* page template
+
+- Add custom error page for 404 and 500
+
+- Add feature to a blog page
+
+- Add back up button for mobile
+
+- Add preview picture
+
+- add search
+
+- Add command menu

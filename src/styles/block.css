@@ -1,0 +1,48 @@
+@media (min-width: 60rem) {
+	.wrapper {
+		--gutter: var(--space-xl);
+	}
+
+	.inner-wrapper {
+		--gutter: var(--space-m);
+	}
+}
+
+.main .switcher {
+	--gutter: var(--space-xl)
+}
+
+.article__content {
+	font-size: var(--size-step-1);
+	max-width: 65ch;
+
+	& > p:first-child {
+		font-size: var(--size-step-2);
+		font-style: italic;
+		max-width: 50ch;
+		text-wrap: balance;
+	}
+
+	& > p:first-child + * {
+		--flow-space: 2em;
+	}
+
+	code {
+		color: var(--clr-secondary);
+		font-family: var(--font-mono);
+		font-size: .8em;
+		/* max-width: 75ch; */
+		max-width: 100%;
+	}
+
+	pre {
+		overflow-wrap: normal;
+		overflow-x: auto;
+		overflow-y: auto;
+		max-width: 100%;
+	}
+	
+	mark {
+		background-color: var(--clr-primary);
+	}
+}
