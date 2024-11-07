@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "../styles/composition.css";
 import "../styles/utility.css";
 import "../styles/block.css";
+import "../styles/reset.css";
 import Disclaimer from "../components/Disclaimer.astro";
 
 const {title, locale} = Astro.props;
@@ -16,7 +17,6 @@ const lang = locale ? locale : "en";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="/src/styles/reset.css" />
 		<!-- Fonts -->
 		<!-- TODO: self-host font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />

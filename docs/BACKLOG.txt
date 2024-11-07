@@ -1,4 +1,4 @@
-- * Add /about page
+- host a website
 
 ---
 
@@ -16,6 +16,6 @@
 
 - Add preview picture
 
-- add search
+- Add search
 
 - Add command menu
