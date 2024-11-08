@@ -9,6 +9,7 @@
 	--clr-light-rgb: 255, 255, 255;
 	--clr-mid: hsl(240, 7%, 60%);
 	--clr-primary: hsl(72, 90%, 64%);
+	--clr-primary-rgb: 213, 246, 81;
 	--clr-primary-glare: hsl(72, 95%, 72%);
 	--clr-secondary: hsl(32, 93%, 55%);
 	--size-step-0: clamp(1rem, 0.9661rem + 0.1695vw, 1.125rem);

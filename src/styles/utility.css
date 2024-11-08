@@ -21,7 +21,17 @@
 }
 
 .highlight {
-	background: var(--clr-primary);
+	/* background: var(--clr-primary); */
+
+	--highlight-bg: linear-gradient(
+		0deg,
+		transparent 20%,
+		rgba(var(--clr-primary-rgb), 1) 20%,
+		rgba(var(--clr-primary-rgb), 1) 84%,
+		transparent 84%
+	);
+
+	background: var(--highlight-bg, --clr-primary);
 }
 
 .inner-wrapper {
