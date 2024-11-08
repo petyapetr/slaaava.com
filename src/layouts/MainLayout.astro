@@ -5,9 +5,12 @@ import "../styles/utility.css";
 import "../styles/block.css";
 import "../styles/reset.css";
 import Disclaimer from "../components/Disclaimer.astro";
+import { getFormattedDate } from "../helpers";
 
 const {title, locale} = Astro.props;
 const lang = locale ? locale : "en";
+
+const buildTime = getFormattedDate(new Date())
 ---
 
 <html {lang}>
@@ -81,7 +84,7 @@ const lang = locale ? locale : "en";
 						>
 					</ul>
 					<div class="update" data-screen="desktop"
-						>Updated: <span class="text-narrow">28 October 2024</span></div
+						>Updated: <span class="text-narrow">{buildTime}</span></div
 					>
 				</footer>
 			</main>

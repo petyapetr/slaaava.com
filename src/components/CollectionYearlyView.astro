@@ -1,10 +1,9 @@
 ---
-import type { CollectionKey } from "astro:content";
+import type {CollectionKey} from "astro:content";
 import {getCollection} from "astro:content";
 interface Props {
 	collectionName: CollectionKey;
 }
-
 const {collectionName} = Astro.props;
 const collection = await getCollection(collectionName);
 const orderedCollection = collection.sort(

@@ -4,6 +4,8 @@ interface Props {
 	entry: CollectionEntry<"blog">;
 }
 
+import {getFormattedDate} from "../helpers";
+
 import MainLayout from "./MainLayout.astro";
 import LatestContent from "../components/LatestContent.astro";
 
@@ -18,15 +20,7 @@ const {Content} = await entry.render();
 		<h1><mark>{title}</mark></h1>
 		<p class="update"
 			><strong>Published:</strong>
-			<span class="text-narrow"
-				>{
-					publishDate.toLocaleDateString("en-GB", {
-						year: "numeric",
-						month: "long",
-						day: "numeric",
-					})
-				}</span
-			></p
+			<span class="text-narrow">{getFormattedDate(publishDate)}</span></p
 		>
 	</div>
 	<div class="article__content | flow | inner-wrapper">
@@ -35,15 +29,7 @@ const {Content} = await entry.render();
 	<div class="footnotes | inner-wrapper">
 		<p class="update"
 			><strong>Updated:</strong>
-			<span class="text-narrow"
-				>{
-					updateDate.toLocaleDateString("en-GB", {
-						year: "numeric",
-						month: "long",
-						day: "numeric",
-					})
-				}</span
-			></p
+			<span class="text-narrow">{getFormattedDate(updateDate)}</span></p
 		>
 	</div>
 

@@ -7,6 +7,8 @@ interface Props {
 	exclude: CollectionEntry<CollectionKey>;
 }
 
+import {getFormattedDate} from "../helpers";
+
 const {collectionName, count = 5, exclude} = Astro.props;
 const collection = await getCollection(collectionName);
 const records = collection
@@ -21,11 +23,7 @@ const records = collection
 	.map((entry) => {
 		const {data, slug} = entry;
 		const {title, publishDate} = data;
-		const formattedDate = publishDate.toLocaleDateString("en-GB", {
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		});
+		const formattedDate = getFormattedDate(publishDate);
 		const href = "/" + collectionName + "/" + slug;
 		return [title, formattedDate, href];
 	})
