@@ -1,8 +1,8 @@
-- host a website
-
----
-
 - Add styles for code blocks within blog template
+
+- Split up css to layers
+
+- Simplify css structure (put composition to utility)
 
 - Add backlinks to a /blog/* page template
 
