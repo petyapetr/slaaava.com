@@ -5,12 +5,12 @@ import "../styles/utility.css";
 import "../styles/block.css";
 import "../styles/reset.css";
 import Disclaimer from "../components/Disclaimer.astro";
-import { getFormattedDate } from "../helpers";
+import {getFormattedDate} from "../helpers";
 
 const {title, locale} = Astro.props;
 const lang = locale ? locale : "en";
 
-const buildTime = getFormattedDate(new Date())
+const buildTime = getFormattedDate(new Date());
 ---
 
 <html {lang}>
