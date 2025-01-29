@@ -56,7 +56,7 @@ Yeah, it works, but now you have to consider the context every time you add a di
 
 ## Complex (Selector) Made (Markup) Easy
 
-Let's make our divider class context aware then.
+Let's make our divider class context-aware then.
 
 First, we need to avoid setting margins in the default class rule since we can't remove them later.
 
