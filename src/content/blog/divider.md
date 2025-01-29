@@ -34,7 +34,7 @@ Here's a basic implementation with configurable variables:
 
 That will do in most of the cases. However, it clashes with most useful css utility of all.
 
-## :not(normal) flow
+## Not-normal Flow
 
 Let me introduce you to flow — perhaps the most useful CSS utility.
 
