@@ -8,7 +8,7 @@ Context-aware divider utility implemented with CSS.
 
 ## Useful Empty div
 
-Vertical lines in content are my favorite. From a design standpoint, they might seem like a lazy way to separate content, but they're incredibly effective. I adore them everywhere — in markdown files with `---`, in Notion, even in Google Docs. I I bring them with me everywhere, even to places that don't support them (looking at you, Apple Notes[^apple-notes]). So why not bring them to your sites?
+Vertical lines in content are my favorite. From a design standpoint, they might seem like a lazy way to separate content, but they're incredibly effective. I adore them everywhere — in markdown files with `---`, in Notion, even in Google Docs. I bring them with me everywhere, even to places that don't support them (looking at you, Apple Notes[^apple-notes]). So why not bring them to your sites?
 
 [^apple-notes]: Actually, they might support divider lines, not sure. I found them once but have struggled to find them in the menus ever since.
 
@@ -40,9 +40,9 @@ Let me introduce you to flow — perhaps the most useful CSS utility.
 
 Regarding their tech stack, year after year, web developers start their projects with good old `* {margin: 0}` to eliminate the annoying default white spaces in the `body` tag. However, this also breaks the “normal flow” of semantic text documents.
 
-For those of us who appreciate well-thought-out defaults while wanting more control, we can bring the flow back with this magical rule: .flow > * + *. If you're not using it yet, you probably should.
+For those of us who appreciate well-thought-out defaults while wanting more control, we can bring the flow back with this magical rule: `.flow > * + *`. If you're not using it yet, you probably should.
 
-To understand the details, you might want to read this [article](https://piccalil.li/blog/flow-utility/) by Andy Bell. In short, this utility creates a top margin between direct siblings of a .flow parent (except the first one) — providing flow and rhythm to a stack of elements.
+To understand the details, you might want to read this [article](https://piccalil.li/blog/flow-utility/) by Andy Bell. In short, this utility creates a top margin between direct siblings of a `.flow` parent (except the first one) — providing flow and rhythm to a stack of elements.
 
 Pretty neat, but as mentioned above, `.flow` doesn't play well with another one of my beloved utilities: `.divider`.
 
