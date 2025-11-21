@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+[data-theme="light"] {
+	--clr-bg: var(--color-gray-100);
+	--clr-fg: var(--color-gray-900);
+}
+
+[data-theme="dark"] {
+	--clr-bg: var(--color-zinc-900);
+	--clr-fg: var(--color-gray-100);
+}
+
+@theme {
+	--color-*: initial;
+	/* --color-black: #000; */
+	/* --color-white: #fff; */
+	/* --color-gray-50: oklch(0.985 0.002 247.839); */
+	--color-gray-100: oklch(0.967 0.003 264.542);
+	--color-gray-900: oklch(0.21 0.034 264.665);
+	--color-zinc-900: oklch(0.21 0.006 285.885);
+
+	--color-background: var(--clr-bg);
+	--color-foreground: var(--clr-fg);
+
+	--font-weight-*: initial;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+}
+
+@layer base {
+	h1 {
+		font-size: var(--text-2xl);
+		font-weight: var(--font-weight-bold);
+	}
+
+	h2 {
+		font-size: var(--text-xl);
+		font-weight: var(--font-weight-bold);
+	}
+
+	h3 {
+		font-weight: var(--font-weight-medium);
+	}
+
+	p {
+		max-width: 40rem;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+@utility grid-rows-main {
+	grid-template-rows: auto 1fr auto;
+}
+
+@utility reverse {
+	background: var(--clr-bg);
+	color: var(--clr-fg);
+
+	[data-theme="light"] & {
+		--clr-bg: var(--color-zinc-900);
+		--clr-fg: var(--color-gray-100);
+	}
+
+	[data-theme="dark"] & {
+		--clr-bg: var(--color-gray-100);
+		--clr-fg: var(--color-gray-900);
+	}
+}
