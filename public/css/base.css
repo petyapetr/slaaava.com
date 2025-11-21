@@ -1,0 +1,58 @@
+body {
+	background-color: var(--background-1);
+	color: var(--foreground-1);
+	font-family: system-ui, sans-serif;
+	font-size: var(--text-base);
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: var(--text-3xl);
+}
+
+h2 {
+	font-size: var(--text-2xl);
+}
+
+h3 {
+	font-size: var(--text-xl);
+}
+
+h4 {
+	font-size: var(--text-lg);
+}
+
+a {
+	color: var(--foreground-1);
+	cursor: default;
+	text-underline-offset: 0.125em;
+}
+
+a[data-page-current]::after {
+	content: " ↜";
+}
+
+:is(header, nav) a {
+	text-decoration: none;
+}
+
+main a {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: oklch(from var(--foreground-3) l c h);
+}
+
+header a:visited,
+nav a:visited {
+	color: currentColor;
+}
+
+main {
+	max-width: 60ch;
+}

@@ -1,0 +1,18 @@
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100svh;
+	align-items: flex-start;
+}
+
+.flow {
+	--flow-space: 1em;
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+.flow :is(h1, h2, h3, h4) + * {
+	--flow-space: 0.5em;
+}

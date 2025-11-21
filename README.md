@@ -1,5 +1,17 @@
 # slaaava.com
 
+Personal website.
+
+## Commands
+
+### Development
+
+To start with a project run `make serve`.
+
+Deps:
+- gnu make
+- serve (npm)
+
 ## License
 
 - The code is licensed under [0BSD](./0BSD.md)
