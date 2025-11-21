@@ -19,5 +19,4 @@ deploy:
 		--exclude=".env" \
 		--exclude=".gitignore" \
 		$(CURDIR)/ $(VPS_PATH)
-		# add service caddy reload without sudo
 	@echo "✔︎ Deployed"

@@ -7,19 +7,19 @@ body {
 }
 
 h1 {
-	font-size: var(--text-3xl);
+	font-size: var(--text-fluid-xl-2xl);
 }
 
 h2 {
-	font-size: var(--text-2xl);
+	font-size: var(--text-fluid-lg-xl);
 }
 
 h3 {
-	font-size: var(--text-xl);
+	font-size: var(--text-fluid-base-lg);
 }
 
 h4 {
-	font-size: var(--text-lg);
+	font-size: var(--text-base);
 }
 
 a {
@@ -55,4 +55,8 @@ nav a:visited {
 
 main {
 	max-width: 60ch;
+}
+
+main:last-child {
+	margin-bottom: calc(var(--step) * 10);
 }
