@@ -50,13 +50,8 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
+a:not(header a, nav a):visited {
 	color: oklch(from var(--foreground-3) l c h);
-}
-
-header a:visited,
-nav a:visited {
-	color: currentColor;
 }
 
 main {
@@ -77,7 +72,6 @@ button[data-theme-switch] {
 }
 
 button[data-theme-switch] svg {
-	margin-inline-start: calc(var(--step) * 4);
 	width: calc(var(--step) * 5);
 	height: calc(var(--step) * 5);
 }
