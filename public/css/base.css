@@ -1,3 +1,9 @@
+*,
+::before,
+::after {
+	transition: background-color 0.2s, color 0.2s;
+}
+
 body {
 	background-color: var(--background-1);
 	color: var(--foreground-1);
@@ -59,4 +65,19 @@ main {
 
 main:last-child {
 	margin-bottom: calc(var(--step) * 10);
+}
+
+button[data-theme-switch] {
+	background-color: transparent;
+	border-color: transparent;
+	color: inherit;
+	border-width: 0;
+	line-height: 1;
+	padding: 0;
+}
+
+button[data-theme-switch] svg {
+	margin-inline-start: calc(var(--step) * 4);
+	width: calc(var(--step) * 5);
+	height: calc(var(--step) * 5);
 }

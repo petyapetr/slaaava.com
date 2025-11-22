@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+	<svg id="sun" viewBox="0 0 500 500" fill="currentColor">
+		<circle
+			cx="248.48"
+			cy="252.55"
+			r="97.03"
+		></circle>
+		<rect height="112.39" width="27.9" x="234.53" y="17.45"
+		></rect>
+		<rect height="112.39" width="27.9" x="234.53" y="375.25"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(679.92 -174.83) rotate(90)"
+			width="27.9"
+			x="413.42"
+			y="196.35"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(322.12 182.97) rotate(90)"
+			width="27.9"
+			x="55.63"
+			y="196.35"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(198.96 -228.23) rotate(45)"
+			width="27.9"
+			x="361.03"
+			y="69.85"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(303.75 24.77) rotate(45)"
+			width="27.9"
+			x="108.03"
+			y="322.85"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(908.15 381.93) rotate(135)"
+			width="27.9"
+			x="361.03"
+			y="322.85"
+		></rect>
+		<rect
+			height="112.39"
+			transform="translate(297.35 128.93) rotate(135)"
+			width="27.9"
+			x="108.03"
+			y="69.85"
+		></rect>
+	</svg>
+	<svg id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+		fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+		stroke-linejoin="round">
+		<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+	</svg>
+</svg>
