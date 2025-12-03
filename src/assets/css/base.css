@@ -1,7 +1,9 @@
 *,
 ::before,
 ::after {
-	transition: background-color 0.2s, color 0.2s;
+	transition:
+		background-color 0.2s,
+		color 0.2s;
 }
 
 body {
@@ -50,7 +52,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:not(header a, nav a):visited {
+a[href^="http"]:visited {
 	color: oklch(from var(--foreground-3) l c h);
 }
 

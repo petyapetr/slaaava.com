@@ -1,7 +1,0 @@
-@layer _, base, composition, utility;
-@import url("public/css/normalize.css") layer(_);
-@import url("public/css/tokens.css") layer(_);
-@import url("public/css/base.css") layer(base);
-@import url("public/css/composition.css") layer(composition);
-@import url("public/css/utils.css") layer(utility);
-@import url("public/css/footer.css");

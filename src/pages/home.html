@@ -1,0 +1,70 @@
+{% extends "_includes/base.html" %}
+{% set title = "Home" %}
+{% block content %}
+	<p>Hi, I'm Slava.</p>
+	<p>
+		I'm make stuff on the net and constantly look for ways to simplify
+		everything. This site tells about that journey.
+	</p>
+	<p>
+		Right now I'm building web apps for GIS at
+		<a href="https://geo-vibe.com">geovibe</a>, and hack on things of my own
+		free will.
+	</p>
+	<div style="--flow-space: 3em">
+		<div class="flow">
+			<h2
+				class="mb-8 px-1 pb-1 text-base font-medium"
+				style="color: var(--foreground-3); border-bottom: solid 1px currentColor">
+				Writing
+			</h2>
+			{% include "_includes/writing.html" %}
+		</div>
+	</div>
+	<div style="--flow-space: 3em">
+		<div class="flow">
+			<h2
+				class="mb-8 px-1 pb-1 text-base font-medium"
+				style="color: var(--foreground-3); border-bottom: solid 1px currentColor">
+				Meta
+			</h2>
+			<p>
+				My own content on this this website is copyright free. No strings
+				attached.
+			</p>
+			<p>This site is ad-free and doesn’t use trackers.</p>
+			<p>
+				Pages are written in plain html and markdown. Website is built with my
+				own ssg script, and served with
+				<a href="https://caddyserver.com">Caddy</a>.
+			</p>
+		</div>
+	</div>
+	<div class="mb-16" style="--flow-space: 3em">
+		<h2
+			class="mb-8 px-1 pb-1 text-base font-medium"
+			style="color: var(--foreground-3); border-bottom: solid 1px currentColor">
+			Get in touch
+		</h2>
+		<a
+			href="mailto:slava.zakharov@mailbox.org"
+			style="
+			align-items: center;
+			border-bottom: solid 2px;
+			font-size: var(--text-fluid-base-2xl);
+			gap: calc(var(--step) * 6);
+			text-decoration: none;
+			word-break: break-all;
+		"
+			>slava.zakharov<span style="white-space: nowrap;">@mailbox.org</span>
+			<span
+				style="
+				display: inline-block;
+				padding-inline-start: calc(var(--step) * 6);
+				translate: 0 calc(var(--step) * 0.25);
+			"
+				>→</span
+			></a
+		>
+	</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+<ul class="flow" role="list" data-contents>
+	{% for item in items %}
+		<li>
+			<a href="{{ item.slug }}">{{ item.title }}</a>
+			<time>{{ item.date }}</time>
+		</li>
+	{% endfor %}
+</ul>

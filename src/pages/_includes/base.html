@@ -1,85 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>About — slaaava</title>
-		<link rel="stylesheet" href="style.css" />
-		<link
-			rel="stylesheet"
-			href="public/css/light.css"
-			media="(prefers-color-scheme: light)"
-		/>
-		<link
-			rel="stylesheet"
-			href="public/css/dark.css"
-			media="(prefers-color-scheme: dark)"
-		/>
+		{% include "_includes/meta.html" %}
 	</head>
 	<body>
-		<p
-			class="m-0 reverse text-center"
-			style="
-				background-color: var(--background-1);
-				color: var(--foreground-1);
-				font-stretch: extra-expanded;
-				font-weight: 900;
-			"
-		>
-			Stop war in Ukraine!
-		</p>
+		{% include "_includes/banner.html" %}
 		<div
 			class="flex flex-wrap gap-10"
 			style="
 				padding-inline: var(--page-space-x);
 				margin-block-start: var(--page-space-y);
-			"
-		>
+			">
 			<header style="align-self: flex-start">
-				<h2 class="flex gap-4 text-base mb-1">
+				<h2 class="mb-1 flex gap-4 text-base font-semibold">
 					<a href="/">Slava Zakharov</a>
 					<button
 						data-theme-switch
 						class="translate-y-px"
 						type="button"
-						aria-hidden="true"
-					>
+						aria-hidden="true">
 						<svg aria-hidden="true" viewBox="0 0 32 32">
 							<title aria-hidden="true">Switch Color Theme</title>
-							<use href="/public/icons.svg#sun"></use>
-							<use href="/public/icons.svg#moon"></use>
+							<use href="/assets/icons.svg#sun"></use>
+							<use href="/assets/icons.svg#moon"></use>
 						</svg>
 					</button>
 				</h2>
 				<nav>
 					<ul role="list">
-						<li>
-							<a href="about.html" data-page-current>About</a>
-						</li>
-						<li>...</li>
-						<li>
-							<pre>WIP</pre>
-						</li>
+						{% include "_includes/nav.html" %}
 					</ul>
 				</nav>
 			</header>
 
-			<main class="flow text-pretty" style="min-width: 50%">
-				<h1>About Me</h1>
-				<p>Hi! I'm Slava Zakharov <em>(he/him)</em>, and I write software.</p>
-				<p>Originally from Saint-Petersburg, I'm currently based in Yerevan.</p>
-				<p>
-					I spend long hours trail running, enjoy reading, and whish to write
-					more often. I used to record a
-					<a href="https://deepcuts.ru/podcast">podcast</a> (ru).
-				</p>
-				<p>
-					Feel free to
-					<a href="mailto:slava.zakharov@mailbox.org">email</a>
-					me anything. Alternatively — reach out on
-					<a href="https://bsky.app/profile/beaterpetr.bsky.social">bluesky</a>.
-				</p>
+			<main
+				class="flow text-pretty"
+				style="flex: 1; min-width: max(50%, 30ch); container-type: inline-size">
+				{% block content %}
+					{{ content | safe }}
+				{% endblock %}
 			</main>
 		</div>
 
@@ -88,8 +47,7 @@
 				<div
 					class="col-span-2 flex flex-col justify-between"
 					data-items-end
-					data-col-start-5
-				>
+					data-col-start-5>
 					<h3>Email</h3>
 					<p><a href="mailto:">slava.zakharov@mailbox.org</a></p>
 				</div>
@@ -112,10 +70,13 @@
 					<nav aria-label="Footer links" id="all-pages">
 						<ul role="list">
 							<li>
-								<a href="about.html" data-page-current>About</a>
+								<a
+									href="/"
+									{% if title === "Home" %}data-page-current{% endif %}
+									>Home</a
+								>
 							</li>
-							<li>...</li>
-							<li><pre>WIP</pre></li>
+							{% include "_includes/nav.html" %}
 						</ul>
 					</nav>
 				</div>
@@ -139,6 +100,6 @@
 				</div>
 			</footer>
 		</div>
-		<script src="main.js"></script>
+		<script src="/assets/main.js"></script>
 	</body>
 </html>

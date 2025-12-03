@@ -1,0 +1,23 @@
+ul[data-contents] {
+	--flow-space: 0.5em;
+
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+[data-contents] li {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: 1 / -1;
+}
+
+[data-contents] time {
+	white-space: pre;
+}
+
+/* var(--size-xs) */
+@container (width >= 28rem) {
+	ul[data-contents] {
+		grid-template-columns: 1fr min-content;
+	}
+}

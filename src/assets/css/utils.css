@@ -65,6 +65,9 @@
 .font-medium {
 	font-weight: var(--font-medium);
 }
+.font-semibold {
+	font-weight: var(--font-semibold);
+}
 .text-base {
 	font-size: var(--text-base);
 	line-height: 1.5;

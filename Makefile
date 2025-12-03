@@ -4,9 +4,15 @@ help:
 	@echo "Available targets:"
 	@echo " serve      — serve static for dev"
 	@echo " deploy     — rsync files to vps"
+	@echo " build      — build templates and markup to static pages"
+
+build:
+	node index.js
+	cp -r ./src/assets/ ./dist/assets/
+	@echo "✔︎ Site build"
 
 serve:
-	serve
+	serve dist/
 
 deploy:
 	@echo "Syncing to VPS..."

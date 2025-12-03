@@ -11,6 +11,7 @@
 	--gray-50: oklch(98.5% 0.002 247.839);
 	/* sizing */
 	--step: 0.25rem;
+	--size-xs: 28rem;
 	--size-sm: 40rem;
 	--size-md: 48rem;
 	--size-lg: 64rem;
@@ -21,6 +22,7 @@
 	--page-space-y: clamp(1.5rem, 3vw, 2rem);
 	/* font weights */
 	--font-medium: 500;
+	--font-semibold: 600;
 	--font-bold: 700;
 	--font-black: 900;
 	/* font-sizes */
