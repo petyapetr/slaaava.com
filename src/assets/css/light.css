@@ -7,6 +7,11 @@
 		--foreground-3: var(--zinc-600);
 		--background-1: var(--gray-50);
 
+		*::selection {
+			color: var(--gray-50);
+			background-color: var(--zinc-900);
+		}
+
 		.reverse {
 			--foreground-1: var(--gray-50);
 			--foreground-2: var(--gray-100);
