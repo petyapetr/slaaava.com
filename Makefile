@@ -7,6 +7,7 @@ help:
 	@echo " build      — build templates and markup to static pages"
 
 build:
+	rm -rf ./dist/
 	node index.js
 	cp -r ./src/assets/ ./dist/assets/
 	@echo "✔︎ Site build"
