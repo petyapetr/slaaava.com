@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		{% include "_includes/meta.html" %}
+		<style>
+			.cv h2 + p:has(strong) {
+				text-wrap: balance;
+			}
+		</style>
+	</head>
+	<body
+		style="
+				padding-inline: var(--page-space-x);
+				margin-block: var(--page-space-y);
+			">
+		<main class="cv flow text-pretty">
+			{% block content %}
+				{{ content | safe }}
+			{% endblock %}
+		</main>
+		<hr
+			style="margin-block-start: calc(2 * var(--page-space-y)); margin-block-end: var(--page-space-y);" />
+		<a href="/">Go back</a>
+	</body>
+</html>

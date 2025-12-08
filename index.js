@@ -37,5 +37,9 @@ site.page("/about", () => {
 	const content = readFileSync("content/about.md", "utf-8");
 	return mdRenderer({content, title: "About", group: "about"});
 });
+site.page("/cv", () => {
+	const content = readFileSync("content/cv.md", "utf-8");
+	return mdRenderer({content, title: "CV"}, "cv.html");
+});
 
 site.build();
