@@ -11,27 +11,27 @@
 				padding-inline: var(--page-space-x);
 				padding-block-start: var(--page-space-y);
 			">
-			<header style="align-self: flex-start">
-				<h2 class="mb-1 flex gap-4 text-base font-semibold">
-					<a href="/">Slava Zakharov</a>
-					<button
-						data-theme-switch
-						class="translate-y-px"
-						type="button"
-						aria-hidden="true">
-						<svg aria-hidden="true" viewBox="0 0 32 32">
-							<title aria-hidden="true">Switch Color Theme</title>
-							<use href="/assets/icons.svg#sun"></use>
-							<use href="/assets/icons.svg#moon"></use>
-						</svg>
-					</button>
-				</h2>
+			<div class="no-print" style="align-self: flex-start">
 				<nav>
+					<h2 class="mb-1 flex gap-4 text-base font-semibold">
+						<a href="/">Slava Zakharov</a>
+						<button
+							data-theme-switch
+							class="translate-y-px"
+							type="button"
+							aria-hidden="true">
+							<svg aria-hidden="true" viewBox="0 0 32 32">
+								<title aria-hidden="true">Switch Color Theme</title>
+								<use href="/assets/icons.svg#sun"></use>
+								<use href="/assets/icons.svg#moon"></use>
+							</svg>
+						</button>
+					</h2>
 					<ul role="list">
 						{% include "_includes/nav.html" %}
 					</ul>
 				</nav>
-			</header>
+			</div>
 
 			<main
 				class="flow text-pretty"
@@ -43,7 +43,7 @@
 		</div>
 
 		<div style="container-type: inline-size">
-			<footer class="reverse">
+			<footer class="reverse no-print">
 				<div
 					class="col-span-2 flex flex-col justify-between"
 					data-items-end
