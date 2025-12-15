@@ -6,10 +6,15 @@
 		--foreground-2: var(--gray-800);
 		--foreground-3: var(--zinc-600);
 		--background-1: var(--gray-50);
+		--accent-1: var(--purple-200);
+		--accent-2: var(--purple-300);
 
 		*::selection {
-			color: var(--gray-50);
-			background-color: var(--zinc-900);
+			background-color: var(--accent-1);
+		}
+
+		*::target-text {
+			background-color: var(--accent-2);
 		}
 
 		.reverse {
