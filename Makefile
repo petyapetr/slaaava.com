@@ -18,7 +18,7 @@ serve: build
 
 deploy: build
 	@echo "Syncing to VPS..."
-	rsync -azP $(CURDIR)/dist/ $(VPS_PATH)
+	rsync -azP --delete $(CURDIR)/dist/ $(VPS_PATH)
 	@echo "✔︎ Deployed"
 
 .PHONY: help build serve deploy

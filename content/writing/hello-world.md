@@ -11,7 +11,7 @@ I'm not sure, what is it going to look like. Realistically, this site might only
 
 English isn't my mother tongue. Punctuation, word choice, and sentence structure might be all over the place. That's also something, that I wish to work on with this blog. 
 
-My girlfriend proofreads my writings — love you, hun. I might occasionally use llms to check the grammar. Never will I use it to provide me ideas, write for me, or edit me texts. 
+My girlfriend proofreads my writings — love you, hun. I might occasionally use llms to check the grammar. Never will I use it to provide ideas, write for me, or edit my texts. 
 
 I believe that there is no value for others to read yours llm replies. I would much rather [read the prompt](https://claytonwramsey.com/blog/prompt). So enjoy this sloppy mess of the words here, knowing that they, at least, are all typed by a human.
 
