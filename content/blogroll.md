@@ -1,6 +1,6 @@
 # Blogroll
 
-A collection of websites and newsletters, from people, whom I admire and read regularly.
+A collection of websites and newsletters from people, whom I admire and read regularly.
 
 ## Design
 

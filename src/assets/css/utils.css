@@ -68,11 +68,18 @@
 }
 
 /* fonts */
+.font-mono {
+	font-family: var(--font-mono);
+}
 .font-medium {
 	font-weight: var(--font-medium);
 }
 .font-semibold {
 	font-weight: var(--font-semibold);
+}
+.text-sm {
+	font-size: var(--text-sm);
+	line-height: calc(1.25 / 0.875);
 }
 .text-base {
 	font-size: var(--text-base);

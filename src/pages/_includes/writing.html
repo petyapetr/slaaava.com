@@ -2,7 +2,7 @@
 	{% for item in items %}
 		<li>
 			<a href="{{ item.slug }}.html">{{ item.title }}</a>
-			<time>{{ item.date }}</time>
+			<time class="translate-y-px font-mono text-sm">{{ item.date }}</time>
 		</li>
 	{% endfor %}
 </ul>

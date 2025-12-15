@@ -9,9 +9,14 @@
 body {
 	background-color: var(--background-1);
 	color: var(--foreground-1);
-	font-family: system-ui, sans-serif;
+	font-family: var(--font-sans);
 	font-size: var(--text-base);
 	line-height: 1.5;
+}
+
+h1,
+h2 {
+	letter-spacing: 0.009em;
 }
 
 h1 {
@@ -28,6 +33,10 @@ h3 {
 
 h4 {
 	font-size: var(--text-base);
+}
+
+pre {
+	font-family: var(--font-mono);
 }
 
 a {
@@ -80,4 +89,13 @@ main blockquote {
 	margin-inline-start: var(--page-space-x);
 	padding-block: calc(var(--step) * 4);
 	padding-inline-start: calc(var(--step) * 4);
+}
+
+@media print {
+	.no-print {
+		display: none;
+	}
+	.only-print {
+		display: block;
+	}
 }

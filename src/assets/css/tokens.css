@@ -20,12 +20,18 @@
 	/* spacing */
 	--page-space-x: clamp(0.5rem, 3vw, 2rem);
 	--page-space-y: clamp(1.5rem, 3vw, 2rem);
+	/* font families */
+	--font-sans: system-ui, sans-serif;
+	--font-mono:
+		"Martian Mono", "Berkeley Mono", "JetBrains Mono", "Fira Code",
+		ui-monospace, San Francisco Mono, Monaco, monospace;
 	/* font weights */
 	--font-medium: 500;
 	--font-semibold: 600;
 	--font-bold: 700;
 	--font-black: 900;
 	/* font-sizes */
+	--text-sm: calc(var(--step) * 4);
 	--text-base: calc(var(--step) * 5);
 	--text-lg: calc(var(--step) * 6);
 	--text-xl: calc(var(--step) * 8);

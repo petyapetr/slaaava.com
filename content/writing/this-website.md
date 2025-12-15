@@ -25,7 +25,7 @@ I prefer the simple and explicit approach of defining the routes manually instea
 
 This approach lead increases amount of manual work. However, it also relief you burden of learning tool specific quirks. Then coming back to a codebase after a break, you could just read the existing examples and make changes, instead of going back to the docs.
 
-The script I wrote is a trivial 100 lines of js. It has just a couple of dependencies for parsing the markdown, and rendering templates with jinja/nunjucks (let's stick with one html templating language across the ecosystem, for every ones’ sake). I define end points, as if I was doing it on the server. Write templates to render content to. Run a script, which turns those end points to html pages.
+The script I wrote is a trivial [100 lines](https://github.com/petyapetr/slaaava.com/blob/main/utils.js) of js. It has just a couple of dependencies for parsing markdown, and rendering templates with jinja/nunjucks (let's stick with one html templating language across the ecosystem, for every ones’ sake). I define end points, as if I was doing it on the server. Write templates to render content to. Run a script, which turns those end points to html pages.
 
 My script doesn't cover edge cases, it doesn't optimize bundle size, neither it has internationalization or rss feed; but I don't need any of that at the moment. There are no incremental rebuilds, site is build from a ground up, but it literally takes milliseconds.
 
