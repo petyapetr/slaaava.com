@@ -9,6 +9,18 @@ ul[data-contents] {
 	display: grid;
 	grid-template-columns: subgrid;
 	grid-column: 1 / -1;
+	isolation: isolate;
+	position: relative;
+}
+
+[data-contents] a {
+	inset: 0;
+	position: absolute;
+	z-index: 10;
+}
+
+[data-contents] p {
+	text-decoration: underline;
 }
 
 [data-contents] time {
