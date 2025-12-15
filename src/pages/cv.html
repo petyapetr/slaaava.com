@@ -3,7 +3,7 @@
 	<head>
 		{% include "_includes/meta.html" %}
 		<style>
-			.cv h2 + p:has(strong) {
+			.cv :is(:is(h1, h2) + p:has([href]), p:has(> strong:only-child)) {
 				text-wrap: balance;
 			}
 		</style>

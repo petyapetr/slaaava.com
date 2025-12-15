@@ -8,14 +8,17 @@ help:
 
 build:
 	rm -rf ./dist/
+	pnpm install
 	node index.js
 	cp -r ./src/assets/ ./dist/assets/
 	@echo "✔︎ Site build"
 
-serve:
+serve: build
 	serve dist/
 
-deploy:
+deploy: build
 	@echo "Syncing to VPS..."
 	rsync -azP $(CURDIR)/dist/ $(VPS_PATH)
 	@echo "✔︎ Deployed"
+
+.PHONY: help build serve deploy

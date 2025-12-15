@@ -8,6 +8,9 @@
 .mb-8 {
 	margin-block-end: calc(var(--step) * 8);
 }
+.mb-10 {
+	margin-block-end: calc(var(--step) * 10);
+}
 .mb-16 {
 	margin-block-end: calc(var(--step) * 16);
 }
@@ -16,6 +19,9 @@
 }
 .pb-1 {
 	padding-block-end: calc(var(--step) * 1);
+}
+.pb-20 {
+	padding-block-end: calc(var(--step) * 20);
 }
 .gap-4 {
 	gap: calc(var(--step) * 4);

@@ -23,7 +23,7 @@ export class SiteBuilder {
 		this.collections = new Map();
 	}
 
-	collection = (dir, template, group) => {
+	collection = (dir, template, group, clause) => {
 		const files = readdirSync(dir).map((file) => path.join(dir, file));
 		const items = files.map((file) => {
 			const ext = path.extname(file);
@@ -31,7 +31,7 @@ export class SiteBuilder {
 			const source = readFileSync(file, "utf-8");
 			const {data, content} = parseFrontmatter(source);
 			return {slug, ext, content, ...data};
-		});
+		}).filter(clause);
 		this.collections.set(group, {items, template, group});
 	};
 
@@ -81,10 +81,10 @@ export class SiteBuilder {
 
 export function parseFrontmatter(source) {
 	const lines = source.split("\n");
-	if (!lines[0].startsWith("---")) {
+	if (!lines[0].startsWith("+++")) {
 		return {data: {}, content: source};
 	}
-	const closingIndex = lines.slice(1).findIndex((line) => line === "---");
+	const closingIndex = lines.slice(1).findIndex((line) => line === "+++");
 	if (closingIndex === -1) {
 		return {data: {}, content: source};
 	}

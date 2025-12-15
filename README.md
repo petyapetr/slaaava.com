@@ -10,7 +10,7 @@ To start with a project run `make serve`.
 
 Deps:
 - gnu make
-- serve (npm)
+- pnpm
 
 ## License
 

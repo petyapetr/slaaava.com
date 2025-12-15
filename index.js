@@ -15,29 +15,36 @@ njk.addFilter("formatDate", (dateString) => {
 });
 
 const site = new SiteBuilder();
-site.collection("content/writing", "post.html", "writing");
+site.collection(
+	"content/writing",
+	"post.html",
+	"writing",
+	(item) => item.date !== undefined
+);
 site.page("/", () => {
 	return njk.render("home.html", {
 		items: site.collections
 			.get("writing")
-			.items.toSorted(
-				(a, b) => new Date(b.published_at) - new Date(a.published_at)
-			)
+			.items.toSorted((a, b) => new Date(b.date) - new Date(a.date))
 			.slice(0, 5),
 	});
 });
-site.page("/writing", () => {
+site.page("/writing/", () => {
 	const collection = site.collections.get("writing");
 	collection.items = collection.items.toSorted(
-		(a, b) => new Date(b.published_at) - new Date(a.published_at)
+		(a, b) => new Date(b.date) - new Date(a.date)
 	);
 	return jinjaRenderer(collection, "writing.html");
 });
-site.page("/about", () => {
+site.page("/about/", () => {
 	const content = readFileSync("content/about.md", "utf-8");
 	return mdRenderer({content, title: "About", group: "about"});
 });
-site.page("/cv", () => {
+site.page("/blogroll/", () => {
+	const content = readFileSync("content/blogroll.md", "utf-8");
+	return mdRenderer({content, title: "Blogroll", group: "blogroll"});
+});
+site.page("/cv/", () => {
 	const content = readFileSync("content/cv.md", "utf-8");
 	return mdRenderer({content, title: "CV"}, "cv.html");
 });

@@ -6,41 +6,44 @@ I’m a web developer passionate about making geospatial apps for the web. My pr
 
 ## Experience
 
-**Lead Software Developer — Geovibe**
+**Lead Software Developer — Geovibe CJSC**
 
 _November 2023 — Present_
 
-In this role I lead cross-team projects that involve satellite and drone imagery analysis, data aggregation, event notifications, and data visualization. I also set and direct the technical vision for product development, guiding both engineering-driven work—such as developing customer products (e.g., asset management and analytics solutions in the farming domain built around satellite imagery exploration) and product-driven projects that involve designing systems from scratch (e.g., the GIS part of a solar plant ERP dashboard, integrating drone imagery exploration, task force management, and IoT live tracking; as well as a mapping component built into a water management crm, powering geospatial exploration and data driven insights).
+In this role I lead cross-team projects integrating geospatial data (satellite, drone data) into web-based platform for analytics, event notifications, and visualization. I architected and developed of the mapping system for a solar plan management software (as a part of an ERP system), incorporating drone imagery exploration, task force management, and IoT live tracking. I designed and build a mapping component (e.g., integrating geospatial exploration and data-driven insights into a water management CRM) to enable intuitive spatial data analysis for end-users.
+
 
 **Software Developer — Bariant**
 
 _September 2022 — March 2023_
 
-As a software developer, I implemented features for the company’s web GIS platform. I worked on creating map editing components in Vue using the ArcGIS SDK. Together with our team and WWF Russia, I developed an interface for a satellite imagery analysis app.
+Implemented new features for the company’s web GIS platform. I worked on creating map editing components in Vue using the ArcGIS SDK. Collaborated with diverse team of specialists (including WWF Russia) to develop an intuitive user interface for a satellite imagery analysis app.
 
 **Associate Software Developer — Bariant**
 
 _July 2021 — August 2022_
 
+Assisted in developing the core web GIS product across the stack under senior developers' guidance. Gained experience in integrating third-party mapping libraries and APIs, setting the stage for a promotion.
+
 ## Other
 
-**Backend Developer — Helpdesk Foundation**
+**Software Developer — Helpdesk Foundation**
 
 _February 2025_
 
-I extended an existing Supabase backend by implementing functionality that allows users to leave and retrieve messages alongside with a donation.
+I extended Supabase backend to allows users to leave and read messages alongside side with their donations.
 
 **Tutor — Freelance**
 
 _April 2024 — May 2025_
 
-I tutor a high school student in web development fundamentals, guiding him in building his first couple of websites.
+I provided one-on-one tutoring in web development fundamentals for a high school student, guiding the student to in build their first couple of websites.
 
 **Software Developer — Volunteers Tbilisi**
 
 _April 2024 – July 2024_
 
-I developed a serverless proof of concept for a non-profit aid hotline, streamlining helpdesk requests with automations and webhook integrations.
+I developed a serverless proof of concept application for a non-profit aid hotline, streamlining helpdesk requests with automations and webhook integrations.
 
 ## Education
 
@@ -52,7 +55,7 @@ Urban Planning
 
 ## Skills
 
-Javascript, Typescript, Node.js, CSS, Svelte, SvelteKit, Fastify, Express, Hono, TailwindCSS, ArcGIS API, OpenLayers, Turf.js, MapLibre GL JS, SQL, Postgres, SQLite, PostGIS, GeoServer, Vue.js, React, D3, Astro, Drizzle, Supabase, Caddy, OpenDroneMap
+Javascript, Typescript, Node.js, CSS, Svelte, Fastify, Express, Hono, Tailwind, ArcGIS API, OpenLayers, Turf.js, MapLibre GL JS, SQL, Postgres, SQLite, PostGIS, GeoServer, Vue, React, D3, Astro, Drizzle, Supabase, CI/CD workflows, Git, Caddy, OpenDroneMap
 
 ## Certificates
 

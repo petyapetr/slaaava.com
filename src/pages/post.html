@@ -2,7 +2,7 @@
 {% block content %}
 	<h1>{{ title }}</h1>
 	{% if date %}
-		<p>Published at <time>{{ date | formatDate }}</time></p>
+		<p class="mb-8">Published at <time>{{ date | formatDate }}</time></p>
 	{% endif %}
 	{{ content | safe }}
 {% endblock %}
