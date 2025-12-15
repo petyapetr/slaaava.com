@@ -3,6 +3,7 @@
 @import url("css/tokens.css") layer(_);
 @import url("css/base.css") layer(base);
 @import url("css/composition.css") layer(composition);
+@import url("css/md.css") layer(composition);
 @import url("css/utils.css") layer(utility);
 @import url("css/footer.css");
 @import url("css/contents.css");

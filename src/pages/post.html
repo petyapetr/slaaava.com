@@ -1,6 +1,16 @@
 {% extends "_includes/base.html" %}
 {% block content %}
-	<h1>{{ title }}</h1>
+	<h1 class="heading" data-anchor="{{ title | tokenizeHeading }}">
+		{{ title }}
+
+		<button type="button" data-anchor="${id}">
+			<svg aria-hidden="true" viewBox="0 0 24 24">
+				<title aria-hidden="true">Copy Anchor “{{ title }}”</title>
+				<use href="/assets/icons.svg#link"></use>
+			</svg>
+		</button>
+	</h1>
+
 	{% if date %}
 		<div class="mb-8">
 			<aside style="display: inline">Published at</aside>

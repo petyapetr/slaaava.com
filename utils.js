@@ -8,6 +8,9 @@ import JSON5 from "json5";
 const njk = new nunjucks.Environment(
 	new nunjucks.FileSystemLoader("src/pages")
 );
+njk.addFilter("tokenizeHeading", (heading) => {
+	return encodeURI(heading.toLowerCase().split(" ").join("_"));
+});
 njk.addFilter("formatDate", (dateString) => {
 	const date = new Date(dateString);
 	return date.toLocaleDateString("en-US", {
@@ -17,21 +20,40 @@ njk.addFilter("formatDate", (dateString) => {
 	});
 });
 
+marked.use({
+	renderer: {
+		heading(token) {
+			const id = encodeURI(token.text.toLowerCase().split(" ").join("_"));
+			return `<h${token.depth} class="heading" id="${id}">${token.text}
+			<button type="button" data-anchor="${id}">
+				<svg aria-hidden="true" viewBox="0 0 24 24">
+					<title aria-hidden="true">Copy Anchor “${token.text}”</title>
+					<use href="/assets/icons.svg#link"></use>
+				</svg>
+			</button>
+			</h${token.depth}>\n`;
+		},
+	},
+});
+
 export class SiteBuilder {
 	constructor() {
 		this.routes = [];
 		this.collections = new Map();
+		this.njk = njk;
 	}
 
 	collection = (dir, template, group, clause) => {
 		const files = readdirSync(dir).map((file) => path.join(dir, file));
-		const items = files.map((file) => {
-			const ext = path.extname(file);
-			const slug = file.replace(ext, "").replace("content", "");
-			const source = readFileSync(file, "utf-8");
-			const {data, content} = parseFrontmatter(source);
-			return {slug, ext, content, ...data};
-		}).filter(clause);
+		const items = files
+			.map((file) => {
+				const ext = path.extname(file);
+				const slug = file.replace(ext, "").replace("content", "");
+				const source = readFileSync(file, "utf-8");
+				const {data, content} = parseFrontmatter(source);
+				return {slug, ext, content, ...data};
+			})
+			.filter(clause);
 		this.collections.set(group, {items, template, group});
 	};
 
@@ -45,7 +67,7 @@ export class SiteBuilder {
 				const handler = this.getHandler(ext);
 				this.page(slug, () =>
 					handler(
-						{content, group: collection.group, ...data},
+						{content, group: collection.group, ...data, slug},
 						collection.template
 					)
 				);

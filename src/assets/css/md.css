@@ -1,0 +1,33 @@
+main blockquote {
+	border-inline-start: var(--step) solid var(--foreground-3);
+	font-style: italic;
+	margin-inline-start: var(--page-space-x);
+	padding-block: calc(var(--step) * 4);
+	padding-inline-start: calc(var(--step) * 4);
+}
+
+.heading {
+	display: flex;
+	gap: calc(1em * 0.25);
+}
+
+button[data-anchor] {
+	user-select: none;
+}
+button[data-anchor] svg {
+	width: calc(1em * 0.625);
+}
+@media (hover: hover) {
+	button[data-anchor] {
+		opacity: 0;
+	}
+}
+button[data-anchor]:hover {
+	opacity: 100;
+
+	transition: opacity 0.2s ease-in;
+}
+
+.heading :is(h1, h2, h3, h4) {
+	display: inline;
+}

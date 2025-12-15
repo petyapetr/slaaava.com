@@ -12,7 +12,7 @@ if (definedTheme !== null) {
 
 globalThis.document
 	.querySelector("[data-theme-switch]")
-	.addEventListener("click", () => {
+	?.addEventListener("click", () => {
 		if (styleLight.media === "all") {
 			switchScheme("dark");
 			return;
@@ -26,6 +26,13 @@ globalThis.document
 			: "dark";
 		switchScheme(schema);
 	});
+
+globalThis.document.querySelectorAll("[data-anchor]").forEach((el) => {
+	el?.addEventListener("click", () => {
+		const anchorUrl = globalThis.location + "#" + el.dataset.anchor;
+		navigator.clipboard.writeText(anchorUrl);
+	});
+});
 
 function switchScheme(scheme) {
 	styleLight.media = scheme === "light" ? "all" : "not all";
