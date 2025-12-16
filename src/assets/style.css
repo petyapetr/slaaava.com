@@ -1,4 +1,5 @@
 @layer _, base, composition, utility;
+@import url("css/fonts.css") layer(_);
 @import url("css/normalize.css") layer(_);
 @import url("css/tokens.css") layer(_);
 @import url("css/base.css") layer(base);

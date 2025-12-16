@@ -1,6 +1,6 @@
 # Blogroll
 
-A collection of websites and newsletters from people, whom I admire and read regularly.
+A collection of websites and newsletters from people whom I admire and read regularly.
 
 ## Design
 
@@ -18,6 +18,7 @@ A collection of websites and newsletters from people, whom I admire and read reg
 - [Nicki Tonsky](https://tonsky.me/)’s blog
 - [Sean Goedecke](https://www.seangoedecke.com/)’s blog
 - [Thorsten Ball](https://thorstenball.com/)’s blog and [newsletter](https://substack.com/@thorstenball)
+- [Tom MacWright](https://macwright.com/)’s blog
 - [Unplanned Obsolescence](https://unplannedobsolescence.com/), Alexander Petros’s blog
 
 ## Trail

@@ -24,6 +24,8 @@ marked.use({
 	renderer: {
 		heading(token) {
 			const id = encodeURI(token.text.toLowerCase().split(" ").join("_"));
+			if (token.depth === 1) return `<h1 id="${id}">${token.text}</h1>\n`;
+
 			return `<h${token.depth} class="heading" id="${id}">${token.text}<button type="button" data-anchor="${id}"><svg aria-hidden="true" viewBox="0 0 24 24">
 					<title aria-hidden="true">Copy Anchor “${token.text}”</title>
 					<use href="/assets/icons.svg#link"></use>

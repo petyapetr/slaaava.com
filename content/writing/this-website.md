@@ -31,7 +31,7 @@ My script doesn't cover edge cases, it doesn't optimize bundle size, neither it 
 
 I'm taking limitations of tailored solutions over complexity of of-the-shelf ones, any day of the week.
 
-> “Complexity — BAD”, as Grug famously sad.
+> “complexity bad”, as grug famously [said](https://grugbrain.dev/#grug-on-complexity).
 
 What it currently lacks, and what I'm planning to add next: code snippets highlighting, and some kind of image optimization/processing. 
 

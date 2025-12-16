@@ -25,6 +25,7 @@
 	--page-space-y: clamp(1.5rem, 3vw, 2rem);
 	/* font families */
 	--font-sans: system-ui, sans-serif;
+	--font-serif: Merriweather, Georgia, serif;
 	--font-mono:
 		"Martian Mono", "Berkeley Mono", "JetBrains Mono", "Fira Code",
 		ui-monospace, San Francisco Mono, Monaco, monospace;

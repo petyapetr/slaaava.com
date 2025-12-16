@@ -8,10 +8,11 @@ main blockquote {
 
 .heading {
 	display: flex;
-	gap: calc(1em * 0.25);
 }
 
 button[data-anchor] {
+	margin-inline-end: calc(var(--page-space-x));
+	padding-inline: calc(1em * 0.375);
 	user-select: none;
 }
 button[data-anchor] svg {
@@ -22,10 +23,12 @@ button[data-anchor] svg {
 		opacity: 0;
 	}
 }
-button[data-anchor]:hover {
-	opacity: 100;
+.heading:hover {
+	button[data-anchor] {
+		opacity: 100;
 
-	transition: opacity 0.2s ease-in;
+		transition: opacity 0.2s ease-in;
+	}
 }
 
 .heading :is(h1, h2, h3, h4) {
